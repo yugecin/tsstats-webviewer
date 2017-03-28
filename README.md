@@ -19,11 +19,12 @@ See [yugecin/tsstats](https://github.com/yugecin/tsstats) for the actual statsbo
 ### Installation
 * Get a database with tsstats (see [tsstats repo](https://github.com/yugecin/tsstats))
 * Get a user for the database, it only really needs `SELECT` access
-* Copy <kbd>config.sample.php</kbd> to <kbd>config.php</kbd> and edit everything as needed
-* The live viewer expects that the tsstats bot places the viewer file in the same directory (as <kbd>teamspeak.txt</kbd>, see <kbd>view_viewer.php</kbd>)
+* Copy [config.sample.php](/config.sample.php) to `config.php` and edit everything as needed
+* The live viewer expects that the tsstats bot places the viewer file in the same directory (as `teamspeak.txt`, see [view_viewer.php](/view_viewer.php))
 
 ### Credits
 * Uses [silk icons](http://www.famfamfam.com/lab/icons/silk/) and [flag icons](http://www.famfamfam.com/lab/icons/flags/) from [famfamfam](http://www.famfamfam.com).
+* [tsviewer.php](/tsviewer.php) was based on on teamspeak3 viewer for php5 by Sebastien Gerard, see [tsstatsu.sebastien.me](http://tsstatus.sebastien.me/).
 
 ### License
 [GPL-3.0](/LICENSE)
