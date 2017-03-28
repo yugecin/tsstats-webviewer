@@ -20,7 +20,7 @@ See [yugecin/tsstats](https://github.com/yugecin/tsstats) for the actual statsbo
 * Get a database with tsstats (see [tsstats repo](https://github.com/yugecin/tsstats))
 * Get a user for the database, it only really needs `SELECT` access
 * Copy <kbd>config.sample.php</kbd> to <kbd>config.php</kbd> and edit everything as needed
-* The live viewer expects that the tsstats bot places the viewer file in the same directory (as <kbd>teamspeak.txt<kbd>, see <kbd>view_viewer.php</kbd>)
+* The live viewer expects that the tsstats bot places the viewer file in the same directory (as <kbd>teamspeak.txt</kbd>, see <kbd>view_viewer.php</kbd>)
 
 ### Credits
 * Uses [silk icons](http://www.famfamfam.com/lab/icons/silk/) and [flag icons](http://www.famfamfam.com/lab/icons/flags/) from [famfamfam](http://www.famfamfam.com).
