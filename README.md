@@ -19,7 +19,7 @@ See [yugecin/tsstats](https://github.com/yugecin/tsstats) for the actual statsbo
 ### Installation
 * Get a database with tsstats (see [tsstats repo](https://github.com/yugecin/tsstats))
 * Get a user for the database, it only really needs `SELECT` access
-* Copy config.sample.php to config.php and edit everything as needed
+* Copy <kbd>config.sample.php</kbd> to <kbd>config.php</kbd> and edit everything as needed
 
 ### License
 [GPL-3.0](/LICENSE)
