@@ -21,6 +21,9 @@ See [yugecin/tsstats](https://github.com/yugecin/tsstats) for the actual statsbo
 * Get a user for the database, it only really needs `SELECT` access
 * Copy <kbd>config.sample.php</kbd> to <kbd>config.php</kbd> and edit everything as needed
 
+### Acknowledgments
+Uses [silk icons](http://www.famfamfam.com/lab/icons/silk/) and [flag icons](http://www.famfamfam.com/lab/icons/flags/) from [famfamfam](http://www.famfamfam.com).
+
 ### License
 [GPL-3.0](/LICENSE)
 
