@@ -17,8 +17,8 @@ See [yugecin/tsstats](https://github.com/yugecin/tsstats) for the actual statsbo
 * MySQL/MariaDB db having some tsstats data
 
 ### Installation
-* Get a database with tsstats (see [tsstats repo](https://github.com/yugecin/tsstats)
-* Get a user for the database, it only really needs SELECT acces
+* Get a database with tsstats (see [tsstats repo](https://github.com/yugecin/tsstats))
+* Get a user for the database, it only really needs `SELECT` access
 * Copy config.sample.php to config.php and edit everything as needed
 
 ### License
