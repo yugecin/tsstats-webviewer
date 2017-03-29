@@ -90,14 +90,14 @@ function ts_parse( $response, &$sdata, &$cdata, &$udata, &$sgroupicons, &$cgroup
 		$sgroups = ts_parseline($lines[4]);
 		foreach( $sgroups as $sg ) {
 			if( $sg['iconid'] > 0 ) {
-				$sgroupicons[$sg['sgid']] = 'sgroup_' . $sg['iconid'];
+				$sgroupicons[$sg['sgid']] = 'sgroup_' . $sg['sgid'];
 			}
 		}
 		
 		$cgroups = ts_parseline( $lines[5] );
 		foreach( $cgroups as $cg ) {
 			if( $cg['iconid'] > 0 ) {
-				$cgroupicons[$cg['cgid']] = 'cgroup_' . $cg['iconid'];
+				$cgroupicons[$cg['cgid']] = 'cgroup_' . $cg['cgid'];
 			}
 		}
 	}
