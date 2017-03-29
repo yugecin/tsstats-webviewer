@@ -33,7 +33,7 @@
 <html>
 <head>
 	<meta charset="utf-8"/>
-	<title>Teamspeak stats -[This is Gaming Teamspeak 3 Server] - 24/7 -</title>
+	<title>Teamspeak stats <? php echo TSSERVER_NAME; ?></title>
 	<link type="text/css" rel="stylesheet" href="reset.css" />
 	<link type="text/css" rel="stylesheet" href="style.css" />
 	<link type="text/css" rel="stylesheet" href="silk.css" />
