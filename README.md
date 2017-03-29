@@ -21,6 +21,7 @@ See [yugecin/tsstats](https://github.com/yugecin/tsstats) for the actual statsbo
 * Get a user for the database, it only really needs `SELECT` access
 * Copy [config.sample.php](/config.sample.php) to `config.php` and edit everything as needed
 * The live viewer expects that the tsstats bot places the viewer file in the same directory (as `teamspeak.txt`, see [view_viewer.php](/view_viewer.php))
+* For the viewer, you need to add the icons for every group manually in the `imgres` folder. `sgroup_ID.png` for server groups, `cgroup_ID.png` for channel groups. To get the id, open the permissions and check the numer next to the group. For example, if you see 'Admin (13)' in the servergroups, add the admin icon as `imgres/sgroup_13.png`.
 
 ### Credits
 * Uses [silk icons](http://www.famfamfam.com/lab/icons/silk/) and [flag icons](http://www.famfamfam.com/lab/icons/flags/) from [famfamfam](http://www.famfamfam.com).
