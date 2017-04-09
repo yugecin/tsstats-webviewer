@@ -45,10 +45,11 @@
 	$row[] = "Pages";
 	$p = "";
 	for( $i = 0; $i < $npages; $i++ ) {
+		$ni = $i + 1;
 		if( $page == $i ) {
-			$p .= "$i&nbsp;";
+			$p .= "$ni&nbsp;";
 		} else {
-			$p .= "<a href=\"?search={$search}&page={$i}\">{$i}</a>&nbsp;";
+			$p .= "<a href=\"?search={$search}&page={$i}\">{$ni}</a>&nbsp;";
 		}
 	}
 	$row[] = $p;
