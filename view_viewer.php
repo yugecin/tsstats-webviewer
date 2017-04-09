@@ -19,7 +19,7 @@
 
 	include "tsviewer.php";
 
-	$data = file_get_contents( 'teamspeak.txt' );
+	$data = file_get_contents( '.hteamspeak.txt' );
 	
 	$t = new Table( 'viewer', false );
 	$t->header( 'Viewer (updates every 5th minute)' );

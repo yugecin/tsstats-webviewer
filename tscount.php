@@ -23,7 +23,7 @@
 
 	include "tsviewer.php";
 
-	$data = file_get_contents( 'teamspeak.txt' );
+	$data = file_get_contents( '.hteamspeak.txt' );
 
 	echo( ts_get_user_count( $data ) );
 

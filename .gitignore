@@ -8,3 +8,5 @@ migrate.php
 config.php
 logos.php
 footer.logos.php
+
+*.txt
