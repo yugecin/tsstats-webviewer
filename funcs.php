@@ -180,8 +180,8 @@ function parselastonline( $time )
 {
 	if($time == 0) return "";
 	if(time() - $time <= 300) return "now";
-	if(date('j/m/Y', $time) == date('j/m/Y')) return "today";
-	if(date('m/Y', $time) == date('m/Y') && date('j', $time)+1 == date('j')) return "yesterday";
+	if(date('j/m/Y', $time) == date('j/m/Y')) return date('H:i');
+	if(date('m/Y', $time) == date('m/Y') && date('j', $time)+1 == date('j')) return "yesterday " . date('H:i');
 	return ((int)((time()-$time)/3600/24)+1)." days ago";
 }
 
