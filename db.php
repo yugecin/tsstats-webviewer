@@ -200,13 +200,14 @@ SQL;
 	{
 
 $sql = <<<SQL
-SELECT uid, updates, lastonline, currentname, country,
-(SELECT SUM(count) FROM tod WHERE uid = users.uid AND tod BETWEEN 0 AND 5) AS t1,
-(SELECT SUM(count) FROM tod WHERE uid = users.uid AND tod BETWEEN 6 AND 11) AS t2,
-(SELECT SUM(count) FROM tod WHERE uid = users.uid AND tod BETWEEN 12 AND 17) AS t3,
-(SELECT SUM(count) FROM tod WHERE uid = users.uid AND tod BETWEEN 18 AND 23) AS t4
-FROM users
-WHERE currentname LIKE ?
+SELECT distinct u.uid, updates, lastonline, currentname, country,
+(SELECT SUM(count) FROM tod WHERE tod.uid = u.uid AND tod BETWEEN 0 AND 5) AS t1,
+(SELECT SUM(count) FROM tod WHERE tod.uid = u.uid AND tod BETWEEN 6 AND 11) AS t2,
+(SELECT SUM(count) FROM tod WHERE tod.uid = u.uid AND tod BETWEEN 12 AND 17) AS t3,
+(SELECT SUM(count) FROM tod WHERE tod.uid = u.uid AND tod BETWEEN 18 AND 23) AS t4
+FROM usednames AS u
+JOIN users ON u.uid = users.uid
+WHERE name LIKE ?
 ORDER BY updates DESC, lastonline DESC
 LIMIT ?,?
 SQL;
