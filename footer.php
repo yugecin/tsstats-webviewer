@@ -19,9 +19,9 @@
 
 	$t = new Table( 'footr', false );
 	$t->header( '&copy; 2014-' . date('Y') . ' by Robin "yugecin" C.' );
-	$t->row( array( '<a href="https://github.com/yugecin/tsstats" target=_blank>github.com/yugecin/tsstats</a> <a href="https://github.com/yugecin/tsstats-webviewer" target=_blank>github.com/yugecin/tsstats-webviewer</a>' ) );
-	$t->row( array( 'For reference only, data may deviate. (But shouldn\'t too badly)' ) );
-	$t->row( array( 'This site uses <a href="http://www.famfamfam.com/lab/icons/silk/" target=_blank>silk icons</a> and <a href="http://www.famfamfam.com/lab/icons/flags/" target=_blank>flag icons</a> made by <a href="http://www.famfamfam.com" target=_blank>James M.</a>' ) );
+	foreach( $footertexts as $f ) {
+		$t->row( array( $f ) );
+	}
 	$t->row( array( 'Generated in ' . number_format( microtime( true ) - $__time, 7, '.', ' ' ) . 's, ' . $db->queries . ' queries' ) );
 	$t->output();
 
