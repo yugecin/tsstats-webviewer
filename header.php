@@ -34,7 +34,9 @@
 	$t = new Table( "footr", false );
 	$t->header( '<h1>Teamspeak stats <span>' . TSSERVER_NAME . '</span></h1>' );
 	$t->row( array( 'Last general update: ' . date('D d/m H:i:s', $serverinfo['lastupdate']) . ' (updates every 5th minute) since ' . STARTDATE . '</p>' ) );
-	$t->row( array( 'All times are CET' ) );
+	foreach( $headertexts as $h ) {
+		$t->row( array( $h ) );
+	}
 	if($serverinfo['lastupdate'] < time()-600) {
 		$t->row( array( '<font color="#E63900">Server or bot offline :(</font>' ) );
 	} else {

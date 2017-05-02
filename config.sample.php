@@ -28,5 +28,9 @@ $todcolors = array( "0629AD", "10AE05", "B6B309", "AD0506" );
 define("TSSERVER_NAME", "myserver");
 define("STARTDATE", "24/08/2014");
 
-date_default_timezone_set('Europe/Paris');
+date_default_timezone_set('CET');
+
+$headertexts = array(
+	'All times are CET',
+);
 
