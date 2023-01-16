@@ -30,14 +30,14 @@
 	{
 		$search = $_GET[ "search" ];
 		$clients = $db->findClients( $search, page_min( $page, $perpage ), $perpage );
-		$nclienst = $db->getClientCountSearch( $search );
+		$nclients = $db->getClientCountSearch( $search );
 	}
 	else
 	{
 		$clients = $db->getClientList( page_min( $page, $perpage ), $perpage );
-		$nclienst = $db->getClientCount();
+		$nclients = $db->getClientCount();
 	}
-	$npages = round( $nclienst / $perpage );
+	$npages = ceil( $nclients / $perpage );
 
 	$thead = new Table( "stick", 4 );
 	$thead->header( "Users, ordered by online time, last seen" );
