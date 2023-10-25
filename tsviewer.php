@@ -78,38 +78,47 @@ function ts_parseline( $rawLine )
 function ts_parse( $response, &$sdata, &$cdata, &$udata, &$sgroupicons, &$cgroupicons )
 {
 	$lines = explode( "error id=0 msg=ok\n\r" , $response );
-	if( count( $lines ) == 7 )
+	if( count( $lines ) && !strlen( $lines[0] ))
 	{
-		$sdata = ts_parseline( $lines[1] );
+		array_shift( $lines );
+	}
+	if( count( $lines ) >= 5 )
+	{
+		$sdata = ts_parseline( $lines[0] );
 		$sdata = $sdata[0];
 
-		$cdata = ts_parseline( $lines[2] );
+		$cdata = ts_parseline( $lines[1] );
 
-		$udata = ts_parseline( $lines[3] );
+		$udata = ts_parseline( $lines[2] );
 
-		$sgroups = ts_parseline($lines[4]);
+		$sgroups = ts_parseline($lines[3]);
 		foreach( $sgroups as $sg ) {
 			if( $sg['iconid'] > 0 ) {
 				$sgroupicons[$sg['sgid']] = 'sgroup_' . $sg['sgid'];
 			}
 		}
 		
-		$cgroups = ts_parseline( $lines[5] );
+		$cgroups = ts_parseline( $lines[4] );
 		foreach( $cgroups as $cg ) {
 			if( $cg['iconid'] > 0 ) {
 				$cgroupicons[$cg['cgid']] = 'cgroup_' . $cg['cgid'];
 			}
 		}
+		return true;
 	}
+	return false;
 }
 
 // -------------------------------------------------------------------------------------------------
 
 function ts_render( $response )
 {
-	ts_parse( $response, $sdata, $cdata, $udata, $sgroupicons, $cgroupicons );
-	$data = '';
+	if( !ts_parse( $response, $sdata, $cdata, $udata, $sgroupicons, $cgroupicons ) )
+	{
+		return 'could not parse server response data';
+	}
 	ts_row( $data, 0, 'server_green', $sdata['virtualserver_name'], 'p' );
+	$data = '';
 	if( count( $cdata ) > 0 ) {
 		ts_renderchannel( $data, $udata, $sgroupicons, $cgroupicons, $cdata, 0, 0 );
 	}
