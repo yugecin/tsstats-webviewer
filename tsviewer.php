@@ -117,8 +117,8 @@ function ts_render( $response )
 	{
 		return 'could not parse server response data';
 	}
-	ts_row( $data, 0, 'server_green', $sdata['virtualserver_name'], 'p' );
 	$data = '';
+	ts_row( $data, 0, 'server_green', $sdata['virtualserver_name'], 'p' );
 	if( count( $cdata ) > 0 ) {
 		ts_renderchannel( $data, $udata, $sgroupicons, $cgroupicons, $cdata, 0, 0 );
 	}
