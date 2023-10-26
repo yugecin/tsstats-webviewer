@@ -194,7 +194,7 @@ function ts_renderchannel( &$data, $udata, $sgroupicons, $cgroupicons, $cdata, $
 			
 			ts_row( $data, $depth, $icon, mkchanlink( $chan['cid'], $chan['channel_name'], 60 ), $flags );
 
-			if( count( $udata > 0 ) ) {
+			if( count( $udata ) > 0 ) {
 				ts_renderuser( $data, $udata, $sgroupicons, $cgroupicons, $chan['cid'], $depth + 1 );
 			}
 			
